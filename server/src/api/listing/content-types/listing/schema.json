@@ -1,0 +1,147 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listings",
+  "info": {
+    "singularName": "listing",
+    "pluralName": "listings",
+    "displayName": "Listing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "premium": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "price": {
+      "type": "integer",
+      "required": true,
+      "default": 10000
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Flat/Apartment",
+        "Hostel",
+        "PG"
+      ],
+      "required": true
+    },
+    "slugId": {
+      "type": "uid",
+      "required": true,
+      "targetField": "name"
+    },
+    "owner_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::owner-user.owner-user",
+      "mappedBy": "listings"
+    },
+    "distance": {
+      "type": "decimal"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "listings"
+    },
+    "amenities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::amenity.amenity",
+      "mappedBy": "listings"
+    },
+    "number_of_beds": {
+      "type": "integer"
+    },
+    "number_of_bathrooms": {
+      "type": "integer",
+      "required": true
+    },
+    "furniture": {
+      "type": "enumeration",
+      "enum": [
+        "Furnished",
+        "Unfurnished"
+      ]
+    },
+    "balcony": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "purpose": {
+      "type": "enumeration",
+      "enum": [
+        "Single-Bed",
+        "Rent",
+        "Sale"
+      ]
+    },
+    "dimensions": {
+      "type": "integer"
+    },
+    "testimonial": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::testimonial.testimonial",
+      "inversedBy": "listings"
+    },
+    "bhk": {
+      "type": "enumeration",
+      "enum": [
+        "size-1RK",
+        "size-1bhk",
+        "size-2bhk",
+        "size-2.5bhk",
+        "size-3bhk",
+        "size-4bhk"
+      ]
+    },
+    "possession": {
+      "type": "enumeration",
+      "enum": [
+        "immediate",
+        "after 15 days",
+        "month later"
+      ]
+    },
+    "college": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::college-category.college-category",
+      "inversedBy": "listings"
+    }
+  }
+}

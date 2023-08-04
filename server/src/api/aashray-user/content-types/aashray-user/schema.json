@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aashray_users",
+  "info": {
+    "singularName": "aashray-user",
+    "pluralName": "aashray-users",
+    "displayName": "AashrayUser"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "profile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "mobile": {
+      "type": "biginteger"
+    },
+    "premium": {
+      "type": "boolean"
+    },
+    "password": {
+      "type": "password"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

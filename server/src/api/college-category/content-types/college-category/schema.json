@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "college_categories",
+  "info": {
+    "singularName": "college-category",
+    "pluralName": "college-categories",
+    "displayName": "CollegeCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "listings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::listing.listing",
+      "mappedBy": "college"
+    }
+  }
+}

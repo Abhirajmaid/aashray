@@ -1,0 +1,14 @@
+export { default as Home } from "./Home";
+export { default as About } from "./About";
+export { default as Property } from "./Property";
+export { default as Blog } from "./Blog";
+export { default as Contact } from "./Contact";
+export { default as Portifolio } from "./Portifolio";
+export { default as Team } from "./Team";
+export { default as Faqs } from "./Faqs";
+export { default as SingleProperty } from "./SingleProperty";
+export { default as PageNotFound } from "./PageNotFound";
+export { default as Premium } from "./Premium"
+export { default as UserProfile } from "./UserProfile"
+export { default as Signin } from "./_Authentication/Signin";
+export { default as Signup } from "./_Authentication/Signup";

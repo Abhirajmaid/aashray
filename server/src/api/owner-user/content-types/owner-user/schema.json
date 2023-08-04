@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "owner_users",
+  "info": {
+    "singularName": "owner-user",
+    "pluralName": "owner-users",
+    "displayName": "OwnerUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "PhoneNo": {
+      "type": "biginteger",
+      "required": true
+    },
+    "City": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Password": {
+      "type": "password",
+      "required": true
+    },
+    "listings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::listing.listing",
+      "inversedBy": "owner_users"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Owner",
+        "Agent",
+        "Builder"
+      ],
+      "required": true
+    },
+    "ProfilePicture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
