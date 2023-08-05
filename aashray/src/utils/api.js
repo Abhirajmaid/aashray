@@ -8,7 +8,7 @@ export const fetchDataFromApi = async (endpoint) => {
         }
     };
 
-    const res = await fetch(`${API_URL}${endpoint}`, options);
+    const res = await fetch(`https://aashray-server.onrender.com${endpoint}`, options);
     const data = await res.json();
     // console.log(data);
     return data;
