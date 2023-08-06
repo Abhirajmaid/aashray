@@ -41,14 +41,14 @@ const Signin = () => {
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
-      success("Login Succeessfully");
     } catch (error) {
       console.log(error);
     }
-  };  
+  };
 
   useEffect(() => {
     if (user != null) {
+      success("Login Succeessfully");
       navigate("/user-profile");
     }
   }, [user]);

@@ -39,7 +39,9 @@ const Testimonial = () => {
     <div className="pt-20 pb-16">
       <div className="text-center">
         <h1 className="mx-auto sub-heading">testimonial</h1>
-        <h1 className="heading">what they're saying about our work feedback</h1>
+        <h1 className="md:heading text-2xl font-bold ">
+          what they're saying about our work feedback
+        </h1>
       </div>
       {showLoader ? (
         <Loader />

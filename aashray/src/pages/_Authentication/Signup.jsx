@@ -61,6 +61,7 @@ const Signup = () => {
 
   useEffect(() => {
     if (user != null) {
+      success("Login Succeessfully");
       navigate("/user-profile");
     }
   }, [user]);

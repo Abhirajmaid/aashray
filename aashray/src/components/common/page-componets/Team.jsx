@@ -6,7 +6,9 @@ const Team = () => {
     <div className="pt-10 pb-16">
       <div className="text-center">
         <h1 className="mx-auto sub-heading">our agents</h1>
-        <h1 className="heading">meet with our experienced team</h1>
+        <h1 className="md:heading text-2xl font-bold ">
+          meet with our experienced team
+        </h1>
       </div>
       <div>
         <div className="grid grid-cols-1 gap-3 mt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

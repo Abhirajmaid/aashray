@@ -61,7 +61,7 @@ function App() {
           <Navbar />
           <Dropdown />
           <div
-            className="min-h-screen pb-40"
+            className="min-h-screen pb-17"
             onClick={handleCloseDropdown}
             onMouseOver={() => dispatch(closeDropdown())}
           >

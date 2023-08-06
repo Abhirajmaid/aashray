@@ -1,6 +1,21 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { BiBriefcase, BiBuildings, BiMap, BiMoney } from "react-icons/bi";
 
 const Filters = () => {
+  const [college, setCollege] = useState("");
+  const [type, setType] = useState("");
+  const [gender, setGender] = useState("");
+
+  const navigate = useNavigate();
+
+  const search = () => {
+    navigate(
+      `/properties?filters[college][&eqi]=${college}&filters[Type][$eqi]=${type}&filters[gender][$eqi]=${gender}&populate=*`
+    );
+  };
+
   return (
     <div className="md:max-w-[80%] w-full mx-auto relative -mt-8 sm:-mt-20">
       <div className="flex-col bg-white gap-x-4 flex-center-between gap-y-4 md:gap-y-0 md:flex-row card card-shadow dark:shadow-none">
@@ -13,6 +28,7 @@ const Filters = () => {
                 type="text"
                 className="w-full bg-transparent border-0 outline-none"
                 placeholder="Enter location of the property"
+                onChange={(e) => setCollege(e.target.value)}
               />
             </div>
           </div>
@@ -24,10 +40,13 @@ const Filters = () => {
                 name=""
                 id=""
                 className="w-full bg-transparent border-0 outline-none dark:bg-hover-color-dark opacity-70"
+                onChange={(e) => {
+                  setType(e.target.value);
+                }}
               >
-                <option value="flats/appartment">Flats/Appartment</option>
-                <option value="hostel">Hostel</option>
-                <option value="pgs">PGs</option>
+                <option value="Flat/Apartment">Flats/Appartment</option>
+                <option value="Hostel">Hostel</option>
+                <option value="PG">PGs</option>
               </select>
             </div>
           </div>
@@ -39,10 +58,13 @@ const Filters = () => {
                 name=""
                 id=""
                 className="w-full bg-transparent border-0 outline-none opacity-70 dark:bg-hover-color-dark"
+                onChange={(e) => {
+                  setGender(e.target.value);
+                }}
               >
-                <option value="rent">Any</option>
-                <option value="rent">Boys</option>
-                <option value="sell">Girls</option>
+                <option value="any">Any</option>
+                <option value="boys">Boys</option>
+                <option value="girls">Girls</option>
               </select>
             </div>
           </div>
@@ -70,7 +92,9 @@ const Filters = () => {
             </div>
           </div> 
         </div> */}
-        <button className="w-full btn btn-primary md:w-fit">search</button>
+        <button className="w-full btn btn-primary md:w-fit" onClick={search}>
+          search
+        </button>
       </div>
     </div>
   );
