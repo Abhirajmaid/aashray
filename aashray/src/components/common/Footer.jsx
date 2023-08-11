@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="text-slate-200">
       <footer>
         <div className="flex flex-wrap gap-5">
-          <div className="flex-1 basis-[10rem] mr-10">
+          <div className="flex-1 basis-[10rem]  mr-0 md:mr-10">
             <Link
               to="/"
               className="flex-shrink-0 flex-align-center justify-center md:justify-start gap-x-1"
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex-1 basis-[10rem]">
+          <div className="flex-1 basis-[10rem] p-3 ">
             <h2 className="text-xl font-semibold">Quick Links</h2>
             <ul>
               <li className="my-3 text-muted">
@@ -83,7 +83,7 @@ const Footer = () => {
             <h2 className="text-xl font-semibold text-center md:text-left">
               Services
             </h2>
-            <ul className="flex  md:flex-col md:justify-start ">
+            <ul className="flex md:gap-0 gap-3  md:flex-col md:justify-start ">
               <li className="my-3 text-muted text-center md:text-left">
                 <a href="#" className="text-primary text-base">
                   Find Property

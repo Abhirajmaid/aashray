@@ -1,5 +1,5 @@
 import { BiBuildings, BiGroup, BiHomeAlt } from "react-icons/bi";
-import { FaBalanceScaleLeft, FaInstagram, FaLinkedin, FaRegNewspaper, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaBalanceScaleLeft, FaFacebook, FaInstagram, FaLinkedin, FaRegNewspaper, FaTwitter, FaYoutube } from "react-icons/fa";
 
 //# socials
 export const socials = [
@@ -88,3 +88,239 @@ export const focus = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
     },
 ];
+
+//# Team data (Agents)
+export const teamMembers = [
+    {
+        id: 1,
+        name: "Wabz Braize",
+        role: "Front-end developer",
+        image: "/images/avatar.png",
+        socials: [
+            {
+                link: "/",
+                icon: <FaInstagram />
+            },
+            {
+                link: "/",
+                icon: <FaLinkedin />
+            },
+            {
+                link: "/",
+                icon: <FaTwitter />
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "Ethan Hunt",
+        role: "Backend  engineer",
+        image: "/images/avatar-1.png",
+        socials: [
+            {
+                link: "/",
+                icon: <FaFacebook />
+            },
+            {
+                link: "/",
+                icon: <FaInstagram />
+            },
+            {
+                link: "/",
+                icon: <FaLinkedin />
+            },
+            {
+                link: "/",
+                icon: <FaTwitter />
+            }
+        ]
+    },
+    {
+        id: 3,
+        name: "Raven Kent",
+        role: "UI Designer",
+        image: "/images/avatar-2.png",
+        socials: [
+            {
+                link: "/",
+                icon: <FaFacebook />
+            },
+            {
+                link: "/",
+                icon: <FaInstagram />
+            },
+            {
+                link: "/",
+                icon: <FaLinkedin />
+            },
+            {
+                link: "/",
+                icon: <FaTwitter />
+            }
+        ]
+    },
+    {
+        id: 4,
+        name: "John Doe",
+        role: "Web developer",
+        image: "/images/avatar-3.png",
+        socials: [
+            {
+                link: "/",
+                icon: <FaFacebook />
+            },
+            {
+                link: "/",
+                icon: <FaInstagram />
+            },
+            {
+                link: "/",
+                icon: <FaLinkedin />
+            },
+            {
+                link: "/",
+                icon: <FaTwitter />
+            }
+        ]
+    },
+    {
+        id: 5,
+        name: "John Doe",
+        role: "Web developer",
+        image: "/images/avatar-3.png",
+        socials: [
+            {
+                link: "/",
+                icon: <FaFacebook />
+            },
+            {
+                link: "/",
+                icon: <FaInstagram />
+            },
+            {
+                link: "/",
+                icon: <FaLinkedin />
+            },
+            {
+                link: "/",
+                icon: <FaTwitter />
+            }
+        ]
+    },
+    {
+        id: 6,
+        name: "Raven Kent",
+        role: "UI Designer",
+        image: "/images/avatar-2.png",
+        socials: [
+            {
+                link: "/",
+                icon: <FaFacebook />
+            },
+            {
+                link: "/",
+                icon: <FaInstagram />
+            },
+            {
+                link: "/",
+                icon: <FaLinkedin />
+            },
+            {
+                link: "/",
+                icon: <FaTwitter />
+            }
+        ]
+    },
+    {
+        id: 7,
+        name: "Ethan Hunt",
+        role: "Backend  engineer",
+        image: "/images/avatar-1.png",
+        socials: [
+            {
+                link: "/",
+                icon: <FaFacebook />
+            },
+            {
+                link: "/",
+                icon: <FaInstagram />
+            },
+            {
+                link: "/",
+                icon: <FaLinkedin />
+            },
+            {
+                link: "/",
+                icon: <FaTwitter />
+            }
+        ]
+    },
+    {
+        id: 8,
+        name: "Wabz Braize",
+        role: "Front-end developer",
+        image: "/images/avatar.png",
+        socials: [
+            {
+                link: "/",
+                icon: <FaFacebook />
+            },
+            {
+                link: "/",
+                icon: <FaInstagram />
+            },
+            {
+                link: "/",
+                icon: <FaLinkedin />
+            },
+            {
+                link: "/",
+                icon: <FaTwitter />
+            }
+        ]
+    },
+];
+
+//# Profile Image
+export const profilePic = [
+    {
+        id: 1,
+        profile: "/images/profile/ToyFaces_Colored_BG_8.jpg"
+    },
+    {
+        id: 2,
+        profile: "/images/profile/ToyFaces_Colored_BG_29.jpg"
+    },
+    {
+        id: 3,
+        profile: "/images/profile/ToyFaces_Colored_BG_32.jpg"
+    },
+    {
+        id: 4,
+        profile: "/images/profile/ToyFaces_Colored_BG_37.jpg"
+    },
+    {
+        id: 5,
+        profile: "/images/profile/ToyFaces_Colored_BG_37.jpg"
+    },
+    {
+        id: 6,
+        profile: "/images/profile/ToyFaces_Colored_BG_47.jpg"
+    },
+    {
+        id: 7,
+        profile: "/images/profile/ToyFaces_Colored_BG_49.jpg"
+    },
+    {
+        id: 8,
+        profile: "/images/profile/ToyFaces_Colored_BG_56.jpg"
+    },
+    {
+        id: 9,
+        profile: "/images/profile/ToyFaces_Colored_BG_56.jpg"
+    },
+    {
+        id: 10,
+        profile: "/images/profile/ToyFaces_Colored_BG_59.jpg"
+    },
+]

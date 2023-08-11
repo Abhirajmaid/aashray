@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 const Amenities = ({ amenities }) => {
   console.log(amenities);
   return (
-    <div className=" w-full !p-6 bg-white card card-shadow dark:shadow-none flex flex-col gap-6">
+    <div className=" w-full !p-6 bg-white card card-shadow dark:shadow-none flex flex-col gap-6 mb-8">
       <h1 className="text-2xl font-bold">Amenities</h1>
       <div className="w-full md:flex flex flex-wrap items-center gap-4">
         {amenities?.map((a) => {

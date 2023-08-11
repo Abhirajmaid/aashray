@@ -10,6 +10,16 @@ export const navLinks = [
     url: "/properties",
   },
   {
+    id: 6,
+    linkText: "Roomies",
+    url: "/roomies",
+  },
+  {
+    id: 7,
+    linkText: "Explore Nearby",
+    url: "/explore",
+  },
+  {
     id: 3,
     linkText: "About Us",
     url: "/about-us",

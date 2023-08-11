@@ -24,12 +24,19 @@ const Filters = () => {
             <h1 className="font-bold">College</h1>
             <div className="flex-align-center gap-x-2">
               <BiMap />
-              <input
-                type="text"
-                className="w-full bg-transparent border-0 outline-none"
-                placeholder="Enter location of the property"
+              <select
+                name=""
+                className="w-full bg-transparent border-0 outline-none dark:bg-hover-color-dark opacity-70"
+                id={"college"}
                 onChange={(e) => setCollege(e.target.value)}
-              />
+              >
+                <option value="">Select location of the property</option>
+                <option value="viit">VIIT</option>
+                <option value="vit">VIT</option>
+                <option value="pvg">PVG</option>
+                <option value="pict">PICT</option>
+                <option value="mit-wpu">MIT-WPU</option>
+              </select>
             </div>
           </div>
           <div className="flex-1 w-full p-2 rounded-lg md:w-fit bg-slate-100 dark:bg-hover-color-dark card-bordered">

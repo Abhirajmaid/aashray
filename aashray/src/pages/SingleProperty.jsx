@@ -8,6 +8,8 @@ import {
   OwnerDetails,
   SingleFull,
 } from "../components/singleProperty";
+import Loader from "../components/common/Loader";
+import { Featured } from "../components/common/page-componets";
 
 const SingleProperty = () => {
   const { slug } = useParams();
@@ -36,16 +38,21 @@ const SingleProperty = () => {
   // console.log(propertyData);
   return (
     <div className="pt-16 md:px-[6%] px-[5%] ">
-      <div className="md:flex-row flex flex-col w-full gap-5 ">
-        <div className="md:w-[75%] w-full flex flex-col gap-6">
-          <SingleFull data={propertyData?.attributes} />
-          <Details details={propertyData?.attributes?.description} />
-          <Amenities amenities={propertyData?.attributes?.amenities?.data} />
+      {propertyData ? (
+        <div className="md:flex-row flex flex-col w-full gap-5 ">
+          <div className="md:w-[75%] w-full flex flex-col gap-6">
+            <SingleFull data={propertyData?.attributes} />
+            <Details details={propertyData?.attributes?.description} />
+            <Amenities amenities={propertyData?.attributes?.amenities?.data} />
+          </div>
+          <div className="md:w-[25%] w-full mb-10">
+            <OwnerDetails />
+          </div>
         </div>
-        <div className="md:w-[25%] w-full">
-          <OwnerDetails />
-        </div>
-      </div>
+      ) : (
+        <Loader />
+      )}
+      <Featured />
     </div>
   );
 };

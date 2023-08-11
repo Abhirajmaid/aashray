@@ -548,196 +548,196 @@ export const feeds = [
   },
 ];
 
-export const teamMembers = [
-  {
-    id: 1,
-    name: "Wabz Braize",
-    role: "Front-end developer",
-    image: "/images/avatar.png",
-    socials: [
-      {
-        link: "/",
-        icon: <FaInstagram />
-      },
-      {
-        link: "/",
-        icon: <FaLinkedin />
-      },
-      {
-        link: "/",
-        icon: <FaTwitter />
-      }
-    ]
-  },
-  {
-    id: 2,
-    name: "Ethan Hunt",
-    role: "Backend  engineer",
-    image: "/images/avatar-1.png",
-    socials: [
-      {
-        link: "/",
-        icon: <FaFacebook />
-      },
-      {
-        link: "/",
-        icon: <FaInstagram />
-      },
-      {
-        link: "/",
-        icon: <FaLinkedin />
-      },
-      {
-        link: "/",
-        icon: <FaTwitter />
-      }
-    ]
-  },
-  {
-    id: 3,
-    name: "Raven Kent",
-    role: "UI Designer",
-    image: "/images/avatar-2.png",
-    socials: [
-      {
-        link: "/",
-        icon: <FaFacebook />
-      },
-      {
-        link: "/",
-        icon: <FaInstagram />
-      },
-      {
-        link: "/",
-        icon: <FaLinkedin />
-      },
-      {
-        link: "/",
-        icon: <FaTwitter />
-      }
-    ]
-  },
-  {
-    id: 4,
-    name: "John Doe",
-    role: "Web developer",
-    image: "/images/avatar-3.png",
-    socials: [
-      {
-        link: "/",
-        icon: <FaFacebook />
-      },
-      {
-        link: "/",
-        icon: <FaInstagram />
-      },
-      {
-        link: "/",
-        icon: <FaLinkedin />
-      },
-      {
-        link: "/",
-        icon: <FaTwitter />
-      }
-    ]
-  },
-  {
-    id: 5,
-    name: "John Doe",
-    role: "Web developer",
-    image: "/images/avatar-3.png",
-    socials: [
-      {
-        link: "/",
-        icon: <FaFacebook />
-      },
-      {
-        link: "/",
-        icon: <FaInstagram />
-      },
-      {
-        link: "/",
-        icon: <FaLinkedin />
-      },
-      {
-        link: "/",
-        icon: <FaTwitter />
-      }
-    ]
-  },
-  {
-    id: 6,
-    name: "Raven Kent",
-    role: "UI Designer",
-    image: "/images/avatar-2.png",
-    socials: [
-      {
-        link: "/",
-        icon: <FaFacebook />
-      },
-      {
-        link: "/",
-        icon: <FaInstagram />
-      },
-      {
-        link: "/",
-        icon: <FaLinkedin />
-      },
-      {
-        link: "/",
-        icon: <FaTwitter />
-      }
-    ]
-  },
-  {
-    id: 7,
-    name: "Ethan Hunt",
-    role: "Backend  engineer",
-    image: "/images/avatar-1.png",
-    socials: [
-      {
-        link: "/",
-        icon: <FaFacebook />
-      },
-      {
-        link: "/",
-        icon: <FaInstagram />
-      },
-      {
-        link: "/",
-        icon: <FaLinkedin />
-      },
-      {
-        link: "/",
-        icon: <FaTwitter />
-      }
-    ]
-  },
-  {
-    id: 8,
-    name: "Wabz Braize",
-    role: "Front-end developer",
-    image: "/images/avatar.png",
-    socials: [
-      {
-        link: "/",
-        icon: <FaFacebook />
-      },
-      {
-        link: "/",
-        icon: <FaInstagram />
-      },
-      {
-        link: "/",
-        icon: <FaLinkedin />
-      },
-      {
-        link: "/",
-        icon: <FaTwitter />
-      }
-    ]
-  },
-];
+// export const teamMembers = [
+//   {
+//     id: 1,
+//     name: "Wabz Braize",
+//     role: "Front-end developer",
+//     image: "/images/avatar.png",
+//     socials: [
+//       {
+//         link: "/",
+//         icon: <FaInstagram />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaLinkedin />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaTwitter />
+//       }
+//     ]
+//   },
+//   {
+//     id: 2,
+//     name: "Ethan Hunt",
+//     role: "Backend  engineer",
+//     image: "/images/avatar-1.png",
+//     socials: [
+//       {
+//         link: "/",
+//         icon: <FaFacebook />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaInstagram />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaLinkedin />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaTwitter />
+//       }
+//     ]
+//   },
+//   {
+//     id: 3,
+//     name: "Raven Kent",
+//     role: "UI Designer",
+//     image: "/images/avatar-2.png",
+//     socials: [
+//       {
+//         link: "/",
+//         icon: <FaFacebook />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaInstagram />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaLinkedin />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaTwitter />
+//       }
+//     ]
+//   },
+//   {
+//     id: 4,
+//     name: "John Doe",
+//     role: "Web developer",
+//     image: "/images/avatar-3.png",
+//     socials: [
+//       {
+//         link: "/",
+//         icon: <FaFacebook />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaInstagram />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaLinkedin />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaTwitter />
+//       }
+//     ]
+//   },
+//   {
+//     id: 5,
+//     name: "John Doe",
+//     role: "Web developer",
+//     image: "/images/avatar-3.png",
+//     socials: [
+//       {
+//         link: "/",
+//         icon: <FaFacebook />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaInstagram />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaLinkedin />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaTwitter />
+//       }
+//     ]
+//   },
+//   {
+//     id: 6,
+//     name: "Raven Kent",
+//     role: "UI Designer",
+//     image: "/images/avatar-2.png",
+//     socials: [
+//       {
+//         link: "/",
+//         icon: <FaFacebook />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaInstagram />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaLinkedin />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaTwitter />
+//       }
+//     ]
+//   },
+//   {
+//     id: 7,
+//     name: "Ethan Hunt",
+//     role: "Backend  engineer",
+//     image: "/images/avatar-1.png",
+//     socials: [
+//       {
+//         link: "/",
+//         icon: <FaFacebook />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaInstagram />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaLinkedin />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaTwitter />
+//       }
+//     ]
+//   },
+//   {
+//     id: 8,
+//     name: "Wabz Braize",
+//     role: "Front-end developer",
+//     image: "/images/avatar.png",
+//     socials: [
+//       {
+//         link: "/",
+//         icon: <FaFacebook />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaInstagram />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaLinkedin />
+//       },
+//       {
+//         link: "/",
+//         icon: <FaTwitter />
+//       }
+//     ]
+//   },
+// ];
 
 export const projects = [
   {

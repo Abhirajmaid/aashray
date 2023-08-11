@@ -19,6 +19,7 @@ import {
   Signup,
   UserProfile,
   Premium,
+  LoaderScreen,
 } from "./pages";
 import { closeDropdown } from "./features/uiSlice";
 import Dropdown from "./components/common/DropDown";
@@ -27,11 +28,12 @@ import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoutes";
 import { ToastContextProvider } from "./context/ToastContext";
 import { ToastContainer } from "react-toastify";
+import { Listings, Registration, RoomiesHome } from "./pages/_Rommies";
 // import Loader from "./components/common/Loader";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
-  // const [showLoader, setShowLoader] = useState(false);
+  // const [showLoader, setShowLoader] = useState(true);
   const dispatch = useDispatch();
   const route = useLocation();
 
@@ -49,15 +51,17 @@ function App() {
   }, [route]);
 
   // Loader when page is loading
+  // useEffect(() => setTimeout(setShowLoader(false), 1000), [])
   // window.addEventListener("load", () => {
   //   setShowLoader(false);
   // });
+  // setShowLoader(true)
 
   return (
     <AuthContextProvider>
       <ToastContextProvider>
         <div>
-          {/* {showLoader && <Loader />} */}
+          {/* {showLoader && <LoaderScreen />} */}
           <Navbar />
           <Dropdown />
           <div
@@ -74,6 +78,9 @@ function App() {
               <Route path="/premium" element={<ProtectedRoute><Premium /></ProtectedRoute>} />
               <Route path="/about-us" element={<About />} />
               <Route path="/properties" element={<Property />} />
+              <Route path="/roomies" element={<ProtectedRoute><RoomiesHome /></ProtectedRoute>} />
+              <Route path="/roomies-register" element={<Registration />} />
+              <Route path="/room-mates" element={<Listings />} />
               <Route path="/properties/property/:slug" element={<SingleProperty />} />
               <Route path="/portifolio" element={<Portifolio />} />
               <Route path="/blog" element={<Blog />} />
@@ -84,8 +91,8 @@ function App() {
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
-          <div className="px-[2%] md:px-[6%] bg-card-dark border border-card-dark">
-            {/* <NewsLetter />  */}
+          <div className="px-[2%] md:px-[6%] bg-card-dark border border-card-dark mt-12">
+            {/* <NewsLetter /> */}
             <div className="mt-10">
               <Footer />
             </div>

@@ -29,9 +29,6 @@
         "videos",
         "audios"
       ]
-    },
-    "socials": {
-      "type": "json"
     }
   }
 }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { teamMembers } from "../../../data/dummyData";
+import { teamMembers } from "../../../data/data";
 
 const Team = () => {
   return (
