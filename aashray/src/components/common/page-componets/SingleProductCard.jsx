@@ -56,19 +56,19 @@ const SingleProductCard = ({
             <div className="icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary">
               <BiBed />
             </div>
-            <p className=" text-base ">{number_of_beds} Beds</p>
+            <p className=" text-[15px] ">{number_of_beds} Beds</p>
           </div>
           <div className="flex-align-center gap-x-[1px]">
             <div className="icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary">
               <BiTab />
             </div>
-            <p className=" text-base ">{number_of_bathrooms} Bathrooms</p>
+            <p className=" text-[15px] ">{number_of_bathrooms} Bathrooms</p>
           </div>
           <div className="flex-align-center gap-x-[1px] ">
             <div className="icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary">
               <BiMapAlt />
             </div>
-            <p className=" text-base ">
+            <p className=" text-[15px] ">
               {dimensions ? `${dimensions}sq ft` : `600sq ft`}
             </p>
           </div>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { UserAuth } from "../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "../../firebase";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { storage, db } from "../../firebase";
 import { Toast } from "../../context/ToastContext";
 
 const Signup = () => {
@@ -34,6 +34,7 @@ const Signup = () => {
           username: name,
           email: email,
           mobile: mobile,
+          timestamp: serverTimestamp,
         });
         console.log(docRef.id);
         docRef?.id ? success("Signed Up Succeessfully") : warn("waiting");
@@ -51,20 +52,20 @@ const Signup = () => {
     }
   };
 
-  const handleGoogleSignIn = async () => {
-    try {
-      await googleSignIn();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const handleGoogleSignIn = async () => {
+  //   try {
+  //     await googleSignIn();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (user != null) {
-      success("Login Succeessfully");
-      navigate("/user-profile");
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user != null) {
+  //     success("Login Succeessfully");
+  //     navigate("/user-profile");
+  //   }
+  // }, [user]);
 
   return (
     <div className="pt-16 md:px-[6%] px-[5%] ">
@@ -141,13 +142,13 @@ const Signup = () => {
                 Sign UP
               </button>
             </form>
-            <button
+            {/* <button
               onClick={handleGoogleSignIn}
               className="w-full border border-gray-300 text-md p-2 rounded-lg mb-6 bg-slate-100 dark:bg-transparent hover:border-black dark:hover:bg-black hover:bg-black hover:text-white"
             >
               <img src="google.svg" alt="img" className="w-6 h-6 inline mr-2" />
               Signup with Google
-            </button>
+            </button> */}
             <div className="text-center text-gray-400">
               Have an account?
               <Link to="/signin">

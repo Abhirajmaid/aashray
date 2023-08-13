@@ -324,3 +324,33 @@ export const profilePic = [
         profile: "/images/profile/ToyFaces_Colored_BG_59.jpg"
     },
 ]
+
+//# Services Card
+export const projects = [
+    {
+        id: 1,
+        name: "Rental Properties",
+        image: "/images/rental.jpg",
+        link: "/properties",
+    },
+    {
+        id: 2,
+        name: "Roommates/Rooomies",
+        image: "/images/roomies.jpg",
+        link: "/roomies",
+
+    },
+    {
+        id: 4,
+        name: "Explore Offers",
+        image: "/images/offer.jpg",
+        link: "/explore",
+    },
+    {
+        id: 3,
+        name: "Explore Restaurants",
+        image: "/images/exploreRestaurants.jpg",
+        link: "/explore-restaurants",
+    },
+
+];

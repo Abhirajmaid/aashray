@@ -6,7 +6,7 @@ import {
   Filters,
   Search,
   About,
-  PortfolioHome,
+  Services,
 } from "../components/home";
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
         <About />
         <WhatWeDo />
         <Featured />
-        <PortfolioHome />
+        <Services />
         <Team />
         <Search />
         <Testimonial />

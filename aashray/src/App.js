@@ -29,6 +29,7 @@ import ProtectedRoute from "./routes/ProtectedRoutes";
 import { ToastContextProvider } from "./context/ToastContext";
 import { ToastContainer } from "react-toastify";
 import { Listings, Registration, RoomiesHome } from "./pages/_Rommies";
+import ExploreHome from "./pages/_Explore/ExploreHome";
 // import Loader from "./components/common/Loader";
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/user-profile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
               <Route path="/premium" element={<ProtectedRoute><Premium /></ProtectedRoute>} />
+              <Route path="/explore" element={<ProtectedRoute><ExploreHome /></ProtectedRoute>} />
               <Route path="/about-us" element={<About />} />
               <Route path="/properties" element={<Property />} />
               <Route path="/roomies" element={<ProtectedRoute><RoomiesHome /></ProtectedRoute>} />

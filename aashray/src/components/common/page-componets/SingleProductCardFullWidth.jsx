@@ -26,7 +26,7 @@ const SingleProductCardFullWidth = ({
     navigate(`/properties/property/${slugId}`, { replace: true });
   };
   return (
-    <div className="relative grid grid-cols-1 gap-3 mt-3 overflow-hidden border rounded-lg shadow-light sm:grid-cols-3 md:grid-cols-4 dark:border-card-dark group">
+    <div className="relative h-[300px] grid grid-cols-1 gap-3 mt-3 overflow-hidden border rounded-lg shadow-light sm:grid-cols-3 md:grid-cols-4 dark:border-card-dark group">
       <div className="sm:col-span-1">
         <div className="group !opacity-100 overflow-hidden relative h-full">
           <img
