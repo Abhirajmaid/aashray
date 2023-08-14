@@ -18,8 +18,9 @@ const Hero = () => {
         </h1>
         <div className="pl-3 mt-5 border-l-4 border-primary hidden sm:block">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nulla
-            unde exercitationem! Recusandae error quaerat sapiente
+            Our goal is to assist you in locating the most appropriate housing
+            options, including apartments, <br /> PGs, and hostels, as well as
+            services that will improve your college experience.
           </p>
         </div>
         <Link to="/premium">
@@ -30,21 +31,21 @@ const Hero = () => {
         <div className="mt-6 text-center flex-align-center gap-x-6">
           <div>
             <h1 className="text-3xl sm:text-5xl font-bold">
-              12k <span className="text-2xl sm:text-4xl text-primary">+</span>
+              150 <span className="text-2xl sm:text-4xl text-primary">+</span>
             </h1>
-            <p className="">Requested Projects</p>
+            <p className="">Accommodation Provided</p>
           </div>
           <div>
             <h1 className="text-3xl sm:text-5xl font-bold">
-              15k <span className="text-2xl sm:text-4xl text-primary">+</span>
+              450 <span className="text-2xl sm:text-4xl text-primary">+</span>
             </h1>
-            <p>Projects Completed</p>
+            <p>Roomates Allotted</p>
           </div>
           <div>
             <h1 className="text-3xl sm:text-5xl font-bold">
-              100 <span className="text-2xl sm:text-4xl text-primary">+</span>
+              7K <span className="text-2xl sm:text-4xl text-primary">+</span>
             </h1>
-            <p>Served Clients</p>
+            <p>Bachelors Reach</p>
           </div>
         </div>
       </div>

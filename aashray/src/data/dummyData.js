@@ -739,44 +739,44 @@ export const feeds = [
 //   },
 // ];
 
-export const projects = [
-  {
-    id: 1,
-    name: "Apartment",
-    number: 20,
-    image: "/images/property (17).jpg",
-  },
-  {
-    id: 2,
-    name: "Office",
-    number: 23,
-    image: "/images/property (1).jpeg",
-  },
-  {
-    id: 3,
-    name: "Townhouse",
-    number: 36,
-    image: "/images/property (21).jpg",
-  },
-  {
-    id: 4,
-    name: "living room",
-    number: 12,
-    image: "/images/property (1).jpg",
-  },
-  {
-    id: 5,
-    name: "Real estate",
-    number: 36,
-    image: "/images/property (20).jpg",
-  },
-  {
-    id: 6,
-    name: "luxury apartment",
-    number: 14,
-    image: "/images/property (18).jpg",
-  },
-];
+// export const projects = [
+//   {
+//     id: 1,
+//     name: "Apartment",
+//     number: 20,
+//     image: "/images/property (17).jpg",
+//   },
+//   {
+//     id: 2,
+//     name: "Office",
+//     number: 23,
+//     image: "/images/property (1).jpeg",
+//   },
+//   {
+//     id: 3,
+//     name: "Townhouse",
+//     number: 36,
+//     image: "/images/property (21).jpg",
+//   },
+//   {
+//     id: 4,
+//     name: "living room",
+//     number: 12,
+//     image: "/images/property (1).jpg",
+//   },
+//   {
+//     id: 5,
+//     name: "Real estate",
+//     number: 36,
+//     image: "/images/property (20).jpg",
+//   },
+//   {
+//     id: 6,
+//     name: "luxury apartment",
+//     number: 14,
+//     image: "/images/property (18).jpg",
+//   },
+// ];
 
 // export const focus = [
 //   {

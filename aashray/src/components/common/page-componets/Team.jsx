@@ -17,7 +17,7 @@ const Team = () => {
               <img
                 src={image}
                 alt={name}
-                className="object-cover w-full h-full rounded-lg"
+                className="object-cover w-full h-full rounded-lg "
               />
               <div className="relative z-10 w-4/5 p-2 mx-auto -mt-10 text-center bg-white rounded-lg shadow-md dark:bg-dark-light">
                 <h1 className="text-lg font-semibold">{name}</h1>

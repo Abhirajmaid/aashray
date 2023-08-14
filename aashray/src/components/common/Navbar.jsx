@@ -5,7 +5,6 @@ import { FiDelete, FiMoon, FiSun } from "react-icons/fi";
 import { BiSearch, BiMenu, BiUser, BiBuildingHouse } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-
 import {
   closeDropdown,
   closeSidebar,
@@ -47,11 +46,6 @@ const Navbar = () => {
 
   const handleCloseSidebar = (e) => {
     if (e.target.classList.contains("mobile-modal")) dispatch(closeSidebar());
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("/search");
   };
 
   return (

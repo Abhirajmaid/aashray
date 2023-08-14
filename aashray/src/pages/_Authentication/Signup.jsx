@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { UserAuth } from "../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { storage, db } from "../../firebase";
 import { Toast } from "../../context/ToastContext";
 
@@ -10,10 +10,11 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
+  const [city, setCity] = useState("");
 
   const [status, setStatus] = useState(false);
 
-  const { createUser, googleSignIn, user } = UserAuth();
+  const { createUser } = UserAuth();
   const { success, error, warn } = Toast();
 
   const navigate = useNavigate();
@@ -34,11 +35,11 @@ const Signup = () => {
           username: name,
           email: email,
           mobile: mobile,
-          timestamp: serverTimestamp,
+          city: city,
         });
-        console.log(docRef.id);
+
         docRef?.id ? success("Signed Up Succeessfully") : warn("waiting");
-        navigate("/user-profile");
+        navigate(`/user-profile`);
       } catch (e) {
         console.log(e.message);
         if (e.message === "Firebase: Error (auth/invalid-email).") {
@@ -111,6 +112,17 @@ const Signup = () => {
                     status ? (password ? " " : "!border-red-600") : ""
                   } w-full p-2 rounded-md placeholder:font-light placeholder:text-gray-500 bg-slate-100 dark:bg-hover-color-dark card-bordered outline-none`}
                   onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <div className="py-4">
+                <span className="mb-2 text-md">City</span>
+                <input
+                  type="text"
+                  name="city"
+                  className={`${
+                    status ? (city ? " " : "!border-red-600") : ""
+                  } w-full p-2 rounded-md placeholder:font-light placeholder:text-gray-500 bg-slate-100 dark:bg-hover-color-dark card-bordered outline-none`}
+                  onChange={(e) => setCity(e.target.value)}
                 />
               </div>
               <div className="py-4">

@@ -24,21 +24,34 @@ const Footer = () => {
                 harum explicabo illo, magnam vitae expedita.
               </p>
               <div className="gap-5 my-6 flex-center-center md:flex md:justify-start ">
-                <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
-                  <FiFacebook />
-                </div>
+                <a
+                  href=" https://twitter.com/findaashray?t=3cy6HsouU8BaAuB9M3-qZw&s=09"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
+                    <FaTwitter />
+                  </div>
+                </a>
+                <a
+                  href="https://instagram.com/myaashray?igshid=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
+                    <FaInstagram />
+                  </div>
+                </a>
 
-                <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
-                  <FaTwitter />
-                </div>
-
-                <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
-                  <FaInstagram />
-                </div>
-
-                <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
-                  <FaLinkedin />
-                </div>
+                <a
+                  href="https://www.linkedin.com/company/findaashray/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
+                    <FaLinkedin />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -85,22 +98,22 @@ const Footer = () => {
             </h2>
             <ul className="flex md:gap-0 gap-3  md:flex-col md:justify-start ">
               <li className="my-3 text-muted text-center md:text-left">
-                <a href="#" className="text-primary text-base">
+                <a href="/properties" className="text-primary text-base">
                   Find Property
                 </a>
               </li>
               <li className="my-3 text-muted text-center md:text-left">
-                <a href="#" className="text-primary text-base">
+                <a href="/" className="text-primary text-base">
                   List Property
                 </a>
               </li>
               <li className="my-3 text-muted text-center md:text-left">
-                <a href="#" className="text-primary text-base">
+                <a href="/roomies" className="text-primary text-base">
                   Find Roomies
                 </a>
               </li>
               <li className="my-3 text-muted text-center md:text-left">
-                <a href="#" className="text-primary text-base">
+                <a href="/explore" className="text-primary text-base">
                   Explore Nearby
                 </a>
               </li>

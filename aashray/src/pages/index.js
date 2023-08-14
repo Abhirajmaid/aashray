@@ -3,7 +3,6 @@ export { default as About } from "./About";
 export { default as Property } from "./Property";
 export { default as Blog } from "./Blog";
 export { default as Contact } from "./Contact";
-export { default as Portifolio } from "./Portifolio";
 export { default as Team } from "./Team";
 export { default as Faqs } from "./Faqs";
 export { default as SingleProperty } from "./SingleProperty";

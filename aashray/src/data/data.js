@@ -3,49 +3,51 @@ import { FaBalanceScaleLeft, FaFacebook, FaInstagram, FaLinkedin, FaRegNewspaper
 
 //# socials
 export const socials = [
-    <FaTwitter />,
-    <FaInstagram />,
-    <FaLinkedin />,
-    <FaYoutube />,
+    {
+        icon: < FaTwitter />,
+        link: "https://twitter.com/findaashray?t=3cy6HsouU8BaAuB9M3-qZw&s=09"
+    },
+    {
+        icon: < FaInstagram />,
+        link: " https://instagram.com/myaashray?igshid=MzRlODBiNWFlZA=="
+    },
+    {
+        icon: < FaLinkedin />,
+        link: "https://www.linkedin.com/company/findaashray/"
+    },
 ];
 
 //# faq
 export const faqs = [
     {
         id: 1,
-        question: "How can we help?",
+        question: "What types of living spaces do you offer?",
         response:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
+            "We offer a range of living solutions tailored for students, including rooms, flats, PGs, and hostels, all equipped with essential amenities, ensuring comfort and convenience.",
     },
     {
         id: 2,
-        question: "How can I make refund from your website?",
+        question: "How can I find the perfect living space for me?",
         response:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
+            "Our platform provides an intuitive search feature that allows you to filter and discover your ideal living space based on your preferences such as location, budget, and amenities.",
     },
     {
         id: 3,
-        question: "Do you store any of my information?",
+        question: "Can you assist in finding compatible roommates?",
         response:
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
     },
     {
         id: 4,
-        question: "Should I talk to the bank before booking a home?",
+        question: "What amenities are included in the living spaces you offer?",
         response:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
+            "Our living spaces come with a range of amenities, which may include essentials like Wi-Fi, laundry facilities, security, and more. You can find detailed information about amenities on our platform.",
     },
     {
         id: 5,
-        question: "How do i make payments using my credit card?",
+        question: "What will I get in Aashray Premium ?",
         response:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
-    },
-    {
-        id: 6,
-        question: "How do i link multiple accounts with my phone?",
-        response:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
+            "Premium service gives you access to all information on Flats, Hostels, and PG's along with a physical visit , as well as complete access to sections of roommates, explore nearby, mess menu , and receive numerous interesting offers and discounts on exclusive amenities.",
     },
 ];
 
@@ -93,191 +95,52 @@ export const focus = [
 export const teamMembers = [
     {
         id: 1,
-        name: "Wabz Braize",
-        role: "Front-end developer",
-        image: "/images/avatar.png",
-        socials: [
-            {
-                link: "/",
-                icon: <FaInstagram />
-            },
-            {
-                link: "/",
-                icon: <FaLinkedin />
-            },
-            {
-                link: "/",
-                icon: <FaTwitter />
-            }
-        ]
+        name: "Sakshi Bedmutha",
+        role: "Co-Founder",
+        image: "/images/team/sakshi.jpg",
+        socials: []
     },
     {
         id: 2,
-        name: "Ethan Hunt",
-        role: "Backend  engineer",
-        image: "/images/avatar-1.png",
-        socials: [
-            {
-                link: "/",
-                icon: <FaFacebook />
-            },
-            {
-                link: "/",
-                icon: <FaInstagram />
-            },
-            {
-                link: "/",
-                icon: <FaLinkedin />
-            },
-            {
-                link: "/",
-                icon: <FaTwitter />
-            }
-        ]
+        name: "Shravani Dhobale",
+        role: "Co-Founder",
+        image: "/images/team/shravani.jpg",
+        socials: []
     },
     {
         id: 3,
-        name: "Raven Kent",
-        role: "UI Designer",
-        image: "/images/avatar-2.png",
-        socials: [
-            {
-                link: "/",
-                icon: <FaFacebook />
-            },
-            {
-                link: "/",
-                icon: <FaInstagram />
-            },
-            {
-                link: "/",
-                icon: <FaLinkedin />
-            },
-            {
-                link: "/",
-                icon: <FaTwitter />
-            }
-        ]
+        name: "Darshan Kotecha",
+        role: "Founding Members",
+        image: "/images/team/darshan.jpg",
+        socials: []
     },
     {
         id: 4,
-        name: "John Doe",
-        role: "Web developer",
-        image: "/images/avatar-3.png",
-        socials: [
-            {
-                link: "/",
-                icon: <FaFacebook />
-            },
-            {
-                link: "/",
-                icon: <FaInstagram />
-            },
-            {
-                link: "/",
-                icon: <FaLinkedin />
-            },
-            {
-                link: "/",
-                icon: <FaTwitter />
-            }
-        ]
+        name: "Vaibhav Sawate",
+        role: "Founding Members",
+        image: "/images/team/vaibhav.jpg",
+        socials: []
     },
     {
         id: 5,
-        name: "John Doe",
-        role: "Web developer",
-        image: "/images/avatar-3.png",
-        socials: [
-            {
-                link: "/",
-                icon: <FaFacebook />
-            },
-            {
-                link: "/",
-                icon: <FaInstagram />
-            },
-            {
-                link: "/",
-                icon: <FaLinkedin />
-            },
-            {
-                link: "/",
-                icon: <FaTwitter />
-            }
-        ]
+        name: "Ketan Choudhari",
+        role: "Founding Members",
+        image: "/images/team/ketan.jpg",
+        socials: []
     },
     {
         id: 6,
-        name: "Raven Kent",
-        role: "UI Designer",
-        image: "/images/avatar-2.png",
-        socials: [
-            {
-                link: "/",
-                icon: <FaFacebook />
-            },
-            {
-                link: "/",
-                icon: <FaInstagram />
-            },
-            {
-                link: "/",
-                icon: <FaLinkedin />
-            },
-            {
-                link: "/",
-                icon: <FaTwitter />
-            }
-        ]
+        name: "Atharva Shinde",
+        role: "Founding Members",
+        image: "/images/team/atharva.jpg",
+        socials: []
     },
     {
         id: 7,
-        name: "Ethan Hunt",
-        role: "Backend  engineer",
-        image: "/images/avatar-1.png",
-        socials: [
-            {
-                link: "/",
-                icon: <FaFacebook />
-            },
-            {
-                link: "/",
-                icon: <FaInstagram />
-            },
-            {
-                link: "/",
-                icon: <FaLinkedin />
-            },
-            {
-                link: "/",
-                icon: <FaTwitter />
-            }
-        ]
-    },
-    {
-        id: 8,
-        name: "Wabz Braize",
-        role: "Front-end developer",
-        image: "/images/avatar.png",
-        socials: [
-            {
-                link: "/",
-                icon: <FaFacebook />
-            },
-            {
-                link: "/",
-                icon: <FaInstagram />
-            },
-            {
-                link: "/",
-                icon: <FaLinkedin />
-            },
-            {
-                link: "/",
-                icon: <FaTwitter />
-            }
-        ]
+        name: "Dhiraj Khivasra",
+        role: "Founding Members",
+        image: "/images/team/dhiraj.jpg",
+        socials: []
     },
 ];
 
@@ -343,7 +206,7 @@ export const projects = [
     {
         id: 4,
         name: "Explore Offers",
-        image: "/images/offer.jpg",
+        image: "/images/contact.jpg",
         link: "/explore",
     },
     {
@@ -353,4 +216,44 @@ export const projects = [
         link: "/explore-restaurants",
     },
 
+];
+
+//# Premium Details
+export const primeDetails = [
+    {
+        id: 1,
+        benifit: "Information about Hostel's , PG's , Flats",
+        premium: true,
+        regular: true,
+    },
+    {
+        id: 2,
+        benifit: "Roommates Section",
+        premium: true,
+        regular: false,
+    },
+    {
+        id: 3,
+        benifit: "Explore Nearby",
+        premium: true,
+        regular: false,
+    },
+    {
+        id: 4,
+        benifit: "Direct Contact With Agents / Owners",
+        premium: true,
+        regular: false,
+    },
+    {
+        id: 5,
+        benifit: "Excitng Offers And Discounts",
+        premium: true,
+        regular: false,
+    },
+    {
+        id: 4,
+        benifit: "Daily Menu of Mess around you",
+        premium: true,
+        regular: false,
+    },
 ];

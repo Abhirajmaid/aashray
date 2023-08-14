@@ -11,7 +11,6 @@ import {
   Contact,
   Team,
   Faqs,
-  Portifolio,
   PageNotFound,
   Home,
   SingleProperty,
@@ -84,7 +83,6 @@ function App() {
               <Route path="/roomies-register" element={<Registration />} />
               <Route path="/room-mates" element={<Listings />} />
               <Route path="/properties/property/:slug" element={<SingleProperty />} />
-              <Route path="/portifolio" element={<Portifolio />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/team" element={<Team />} />

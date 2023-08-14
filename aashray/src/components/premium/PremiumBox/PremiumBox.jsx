@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./style.css";
 
-import { primeDetails } from "../../../data/dummyData";
+import { primeDetails } from "../../../data/data";
 import { Icon } from "@iconify/react";
 
 const PremiumBox = () => {
@@ -57,14 +57,13 @@ const PremiumBox = () => {
           <div className="text-base leading-[22px] cursor-pointer p-5 bg-slate-100 card-shadow dark:shadow-none dark:bg-hover-color-dark px-5 py-[30px] rounded-[10px] border-solid">
             <span>Monthly Premium</span>
             <p>
-              <strong>₹200/mo</strong>
+              <strong>₹199/3mo</strong>
             </p>
           </div>
           <div className="text-base leading-[22px] cursor-pointer p-5 rounded-xl bg-primary font-bold">
             <span>Annualy Premium</span>
             <p>
-              <strong>₹125/mo </strong> <br />
-              <s>₹2400</s> ₹1500/year
+              <s>₹799</s> ₹749/year
             </p>
           </div>
         </div>

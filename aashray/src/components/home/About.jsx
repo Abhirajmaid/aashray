@@ -8,37 +8,39 @@ const About = () => {
       <div className="gap-10 flex-col md:flex-row sm:flex-align-center ">
         <div className=" flex flex-1 flex-col basis-[20rem] gap-2">
           <h1 className="sub-heading">about us</h1>
-          <h1 className="heading">we specialize in quality home renovations</h1>
+          <h1 className="heading">
+            Your Ultimate Destination for Conquering College Challenges
+          </h1>
           <p className="mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laborum
-            earum saepe quibusdam, temporibus aut sapiente, ea alias libero,
-            ipsam perferendis. Consectetur maiores, dicta, earum eaque facilis
-            adipisci dignissimos optio fuga officia itaque quo impedit.
+            A startup dedicated to providing comfortable and convenient living
+            solutions for students.Our mission is to create a hassle-free
+            experience for students by offering rooms, flats, PGs and hostels in
+            your locality with all the necessary amenities at affordable prices.
           </p>
           <div className="mt-4 flex flex-col gap-y-4 ">
             <div className="flex-align-center gap-x-2">
               <div className="sm:icon-box h-7 w-7 flex-align-center rounded-full justify-center text-primary !bg-primary/20">
                 <FiCheck />
               </div>
-              <p>Outstanding Property</p>
+              <p>Discover your ideal living space</p>
             </div>
             <div className="mt-2 flex-align-center gap-x-2">
               <div className="sm:icon-box h-7 w-7 flex-align-center rounded-full justify-center text-primary !bg-primary/20">
                 <FiCheck />
               </div>
-              <p>Professional and experienced human resource</p>
+              <p>Assistance from an expert and specialized team</p>
             </div>
             <div className="mt-2 flex-align-center gap-x-2">
               <div className="sm:icon-box h-7 w-7 flex-align-center rounded-full justify-center text-primary !bg-primary/20">
                 <FiCheck />
               </div>
-              <p>Provide the best services for users</p>
+              <p>One platform providing the finest services</p>
             </div>
             <div className="mt-2 flex-align-center gap-x-2">
               <div className="sm:icon-box h-7 w-7 flex-align-center rounded-full justify-center text-primary !bg-primary/20">
                 <FiCheck />
               </div>
-              <p>Modern city locations and exceptional lifestyle</p>
+              <p>Elevating your bachelors life </p>
             </div>
             <Link to={"/about-us"}>
               <button className="mt-[30px] btn btn-primary">read more</button>
