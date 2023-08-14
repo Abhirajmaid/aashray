@@ -13,8 +13,7 @@ const Hero = () => {
       <div className="absolute top-0 right-0 rounded-full bg-[#04a7ff]/30 dark:bg-[#04a7ff]/50 w-72 h-72 -z-10 blur-[120px]"></div>
       <div className="flex-1 basis-[20rem]">
         <h1 className="text-4xl font-bold capitalize md:text-6xl">
-          Discover Your
-          <br /> Ideal Living Space!
+          AASHRAY: <br /> Your Journey, Our Solutions!
         </h1>
         <div className="pl-3 mt-5 border-l-4 border-primary hidden sm:block">
           <p>

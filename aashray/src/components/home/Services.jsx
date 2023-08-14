@@ -21,7 +21,7 @@ const Services = () => {
         <div className="md:col-span-1">
           <h1 className="sub-heading">Portfolio</h1>
           <h1 className="heading">
-            find what you need, everything at 1 place!!
+            find what you need, everything at one place!!
           </h1>
           <p className="mt-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus

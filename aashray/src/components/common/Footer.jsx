@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="text-slate-200">
       <footer>
         <div className="flex flex-wrap gap-5">
-          <div className="flex-1 basis-[10rem]  mr-0 md:mr-10">
+          <div className="flex-1 basis-[20rem] md:w-auto w-full!  mr-0 md:mr-10">
             <Link
               to="/"
               className="flex-shrink-0 flex-align-center justify-center md:justify-start gap-x-1"
@@ -20,8 +20,9 @@ const Footer = () => {
             </Link>
             <div className="mt-3">
               <p className="text-sm text-center md:text-left">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
-                harum explicabo illo, magnam vitae expedita.
+                We offer all of the services necessary to make the bachelor's
+                life simpler, including roommate services, discount offers and
+                affordable living solutions.
               </p>
               <div className="gap-5 my-6 flex-center-center md:flex md:justify-start ">
                 <a
@@ -141,8 +142,8 @@ const Footer = () => {
       </footer>
       <div className="py-2 mt-3 text-center border-t text-muted border-dark">
         <p>
-          Created By <span className="text-primary">Webfudge</span> | All Rights
-          Reserved
+          All Rights Reserved © 2023-24{" "}
+          <span className="text-primary">Aashray Pvt. Ltd.</span>{" "}
         </p>
       </div>
     </div>

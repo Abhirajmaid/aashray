@@ -5,7 +5,7 @@ const Team = () => {
   return (
     <div className="pt-10 pb-16">
       <div className="text-center">
-        <h1 className="mx-auto sub-heading">our agents</h1>
+        <h1 className="mx-auto sub-heading">our team</h1>
         <h1 className="md:heading text-2xl font-bold ">
           meet with our experienced team
         </h1>

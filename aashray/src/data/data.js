@@ -35,7 +35,7 @@ export const faqs = [
         id: 3,
         question: "Can you assist in finding compatible roommates?",
         response:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
+            "Yes, we understand the importance of having compatible roommates. Our expert team can help match you with suitable roommates based on your preferences and profiles.",
     },
     {
         id: 4,
@@ -119,6 +119,13 @@ export const teamMembers = [
         name: "Vaibhav Sawate",
         role: "Founding Members",
         image: "/images/team/vaibhav.jpg",
+        socials: []
+    },
+    {
+        id: 4,
+        name: "Kartik Bhage",
+        role: "Founding Members",
+        image: "/images/team/kartik.jpg",
         socials: []
     },
     {

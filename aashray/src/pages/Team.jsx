@@ -7,7 +7,7 @@ const Team = () => {
       <div className="grid grid-cols-1 gap-3 mt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {teamMembers.map(({ id, name, role, image, socials }) => (
           <div className="h-[250px] w-full mb-16" key={id}>
-            <div className="h-[250px] w-full overflow-hidden ">
+            <div className="h-[250px] w-full rounded-lg overflow-hidden ">
               <img
                 src={image}
                 alt={name}
