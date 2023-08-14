@@ -137,7 +137,7 @@ export const teamMembers = [
     },
     {
         id: 7,
-        name: "Dhiraj Khivasra",
+        name: "Dhiraj Khivasra",
         role: "Founding Members",
         image: "/images/team/dhiraj.jpg",
         socials: []
