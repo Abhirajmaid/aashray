@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { UserAuth } from "../../context/AuthContext";
 import { FiDelete, FiMoon, FiSun } from "react-icons/fi";
-import { BiSearch, BiMenu, BiUser, BiBuildingHouse } from "react-icons/bi";
+import { BiMenu, BiUser, BiBuildingHouse } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
@@ -19,8 +19,6 @@ import SingleLink from "./SingleLink";
 const Navbar = () => {
   const rootDoc = document.querySelector(":root");
   const { darkMode, isSidebarOpen } = useSelector(uiStore);
-  const [showSearchBar, setShowSearchBar] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -50,7 +48,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="navbar h-[45px] fixed w-full z-20 top-0 left-0 px-[2%]  md:px-[6%] flex-center-between py-[0.35rem] bg-white/60 border-b backdrop-blur-sm dark:border-dark dark:bg-card-dark/60"
+      className="navbar h-[45px] fixed w-full z-[50] top-0 left-0 px-[2%]  md:px-[6%] flex-center-between py-[0.35rem] bg-white/60 border-b backdrop-blur-sm dark:border-dark dark:bg-card-dark/60"
       onMouseOver={handleClose}
     >
       <Link to="/" className="flex-shrink-0 flex-align-center gap-x-1">
@@ -60,11 +58,7 @@ const Navbar = () => {
 
       <div className="flex-align-center gap-x-4">
         {/*-------------------------------------- Desktop Menu------------------------------------- */}
-        <ul
-          className={`hidden md:flex-align-center ${
-            showSearchBar && "!hidden"
-          }`}
-        >
+        <ul className={`hidden md:flex-align-center`}>
           {navLinks.map((link) => (
             <SingleLink {...link} key={link.id} />
           ))}
@@ -119,35 +113,6 @@ const Navbar = () => {
         </div>
 
         <div className="space-x-2 flex-align-center">
-          {/*----------------------------- search Bar----------------------------------------------------- */}
-          {/* <form onSubmit={handleSubmit}>
-            <div
-              className={`flex-align-center relative h-9 w-9 transition-a  border-slate-300 dark:border-dark rounded-full ${
-                showSearchBar &&
-                "!w-[150px] md:!w-[200px] border bg-transparent text-inherit"
-              }`}
-            >
-              <input
-                type="search"
-                className={`outline-none border-none h-0 w-0 bg-transparent ${
-                  showSearchBar && "!w-full !h-full px-4"
-                }`}
-                placeholder="search..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <span
-                className={`grid flex-shrink-0 rounded-full w-9 h-9 place-items-center text-white bg-primary sm:cursor-pointer ${
-                  showSearchBar &&
-                  "bg-transparent hover:bg-slate-100 text-inherit sm:cursor-pointer dark:hover:bg-hover-color-dark"
-                }`}
-                onClick={() => setShowSearchBar(!showSearchBar)}
-              >
-                <BiSearch className="text-muted" />
-              </span>
-            </div>
-          </form> */}
-
           {/*----------------------------- Dark mode toggle-------------------------------------------------- */}
           <div
             className="bg-white shadow-md icon-box dark:bg-dark-light hover:shadow-lg hover:bg-transparent"

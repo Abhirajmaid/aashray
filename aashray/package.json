@@ -16,6 +16,7 @@
     "framer-motion": "^7.6.19",
     "google-map-react": "^2.2.1",
     "material-react-table": "^1.5.4",
+    "multiselect-react-dropdown": "^2.0.25",
     "postcss": "^8.4.19",
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",

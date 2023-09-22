@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { Toast } from "../../context/ToastContext";
+import { Icon } from "@iconify/react";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [status, setStatus] = useState(false);
+
+  const [passVisible, setPassVisible] = useState(false);
 
   const navigate = useNavigate();
 
@@ -77,15 +80,20 @@ const Signin = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="py-4">
+              <div className="py-4 relative">
                 <span className="mb-2 text-md">Password</span>
                 <input
-                  type="password"
+                  type={passVisible ? "text" : "password"}
                   name="pass"
                   className={`${
                     status ? (password ? " " : "!border-red-600") : ""
                   } w-full p-2 rounded-md placeholder:font-light placeholder:text-gray-500 bg-slate-100 dark:bg-hover-color-dark card-bordered outline-none`}
                   onChange={(e) => setPassword(e.target.value)}
+                />
+                <Icon
+                  className=" absolute right-3 top-[55%] cursor-pointer"
+                  icon={passVisible ? "bi:eye-fill" : "bi:eye-slash-fill"}
+                  onClick={() => setPassVisible((passVisible) => !passVisible)}
                 />
               </div>
               <div className=" md:flex-row flex-col flex md:items-baseline gap-2 md:gap-0 items-center justify-between w-full py-4">

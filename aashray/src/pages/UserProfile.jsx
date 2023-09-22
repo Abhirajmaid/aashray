@@ -3,67 +3,47 @@ import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 
 import { UserAuth } from "../context/AuthContext";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { profilePic } from "../data/data";
-import { collection, doc, getDoc, onSnapshot } from "firebase/firestore";
-import { db } from "../firebase";
-
-const initialstate = {
-  username: "",
-  email: "",
-  mobile: "",
-  city: "",
-};
+import Loader from "../components/common/Loader";
+import { fetchDataFromApi } from "../utils/api";
 
 const UserProfile = () => {
+  const [roomieUser, setRoomieUser] = useState();
+
   const [primeInfo, setPrimeInfo] = useState(false);
   const [roomiesInfo, setRoomiesInfo] = useState(false);
+
   const [index, setIndex] = useState(null);
-
-  const [data, setData] = useState(initialstate);
-  const { username, email, mobile, city } = data;
-
-  // const [userList, setUserList] = useState([]);
+  const [showLoader, setShowLoader] = useState(false);
   const [singleUser, setSingleUser] = useState([]);
 
-  const { user, logout, userId } = UserAuth();
+  const { user, logout } = UserAuth();
   const navigate = useNavigate();
 
-  const { id } = useParams();
-
-  console.log(userId);
-  console.log(id);
-  // useEffect(() => {
-  //   const unsub = onSnapshot(
-  //     collection(db, "users"),
-  //     (snapshot) => {
-  //       let list = [];
-  //       snapshot.docs.forEach((doc) => {
-  //         list.push({ id: doc.id, ...doc.data() });
-  //       });
-  //       setUserList(list);
-  //       // console.log("id1:", doc.id);
-  //     },
-  //     (error) => {
-  //       console.log(error);
-  //     }
-  //   );
-  //   return () => {
-  //     unsub();
-  //   };
-  // }, []);
+  useEffect(() => {
+    getSingleUser();
+  }, []);
 
   useEffect(() => {
-    id && getSingleUser();
-  }, [id]);
+    if (singleUser[0]?.attributes?.roomies === true) {
+    }
+  }, [singleUser]);
 
   const getSingleUser = async () => {
-    const docRef = doc(db, "users", id);
-    const snapshot = await getDoc(docRef);
-    if (snapshot.exists()) {
-      setData({ ...snapshot.data() });
+    setShowLoader(true);
+    try {
+      const { data } = await fetchDataFromApi(
+        `/api/aashray-users?populate=*&[filters][email][$eq]=${user.email}`
+      );
+      console.log(user.email);
+      setSingleUser(data);
+      setShowLoader(false);
+    } catch (e) {
+      console.log(e);
     }
   };
+  console.log(singleUser);
 
   const handleLogout = async () => {
     try {
@@ -107,11 +87,13 @@ const UserProfile = () => {
           <div className="flex flex-col gap-7">
             <div className="flex gap-5 items-center">
               <span>Name: </span>
-              <h2 className=" font-bold text-lg">{username}</h2>
+              <h2 className=" font-bold text-lg">
+                {singleUser[0]?.attributes?.name}
+              </h2>
             </div>
             <div className="flex gap-5 items-center">
               <span>Email: </span>
-              <h2 className=" font-bold text-lg">{email}</h2>
+              <h2 className=" font-bold text-lg">{user.email}</h2>
             </div>
           </div>
           <div>
@@ -124,11 +106,15 @@ const UserProfile = () => {
           <div className="flex flex-col gap-7">
             <div className="flex gap-5 items-center">
               <span>Contact: </span>
-              <h2 className=" font-bold text-lg">{mobile}</h2>
+              <h2 className=" font-bold text-lg">
+                {singleUser[0]?.attributes?.mobile}
+              </h2>
             </div>
             <div className="flex gap-5 items-center">
               <span>City: </span>
-              <h2 className=" font-bold text-lg">{city}</h2>
+              <h2 className=" font-bold text-lg">
+                {singleUser[0]?.attributes?.city}
+              </h2>
             </div>
           </div>
           <div>

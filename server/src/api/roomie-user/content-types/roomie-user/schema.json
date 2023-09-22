@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roomie_users",
+  "info": {
+    "singularName": "roomie-user",
+    "pluralName": "roomie-users",
+    "displayName": "RoomieUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "college": {
+      "type": "enumeration",
+      "enum": [
+        "VIIT",
+        "VIT",
+        "MIT-wpu",
+        "PVG",
+        "PICT"
+      ]
+    },
+    "studyBackground": {
+      "type": "enumeration",
+      "enum": [
+        "Engineering",
+        "Medical",
+        "Science",
+        "Commerce",
+        "Arts"
+      ]
+    },
+    "branch": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "string"
+    },
+    "passoutyear": {
+      "type": "enumeration",
+      "enum": [
+        "Y2024",
+        "Y2025",
+        "Y2026",
+        "Y2027",
+        "Y2028",
+        "Y2029",
+        "Y2030",
+        "Y2031",
+        "Y2032",
+        "Y2033+"
+      ]
+    },
+    "hobbies": {
+      "type": "string"
+    },
+    "interest": {
+      "type": "string"
+    },
+    "aashray_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::aashray-user.aashray-user",
+      "mappedBy": "roomie_user"
+    },
+    "age": {
+      "type": "integer"
+    }
+  }
+}

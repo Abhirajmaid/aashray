@@ -19,15 +19,16 @@ import {
   UserProfile,
   Premium,
   LoaderScreen,
+  IdentityProof,
 } from "./pages";
 import { closeDropdown } from "./features/uiSlice";
 import Dropdown from "./components/common/DropDown";
-import NewsLetter from "./components/common/NewsLetter";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoutes";
 import { ToastContextProvider } from "./context/ToastContext";
 import { ToastContainer } from "react-toastify";
-import { Listings, Registration, RoomiesHome } from "./pages/_Rommies";
+import { Listings, Registration, RoomieFlatPage, RoomiesHome, SinglesListings } from "./pages/_Rommies";
+// import { MessHome } from "./pages/_Mess/MessHome"
 import ExploreHome from "./pages/_Explore/ExploreHome";
 // import Loader from "./components/common/Loader";
 
@@ -78,11 +79,15 @@ function App() {
               <Route path="/premium" element={<ProtectedRoute><Premium /></ProtectedRoute>} />
               <Route path="/explore" element={<ProtectedRoute><ExploreHome /></ProtectedRoute>} />
               <Route path="/about-us" element={<About />} />
+              {/* <Route path="/mess" element={<MessHome />} /> */}
               <Route path="/properties" element={<Property />} />
               <Route path="/roomies" element={<ProtectedRoute><RoomiesHome /></ProtectedRoute>} />
-              <Route path="/roomies-register" element={<Registration />} />
-              <Route path="/room-mates" element={<Listings />} />
+              <Route path="/roomies-register" element={<ProtectedRoute><Registration /></ProtectedRoute>} />
+              <Route path="/roomie-flats" element={<ProtectedRoute><Listings /></ProtectedRoute>} />
+              <Route path="/roommates" element={<ProtectedRoute><SinglesListings /></ProtectedRoute>} />
+              <Route path="/identity" element={<ProtectedRoute><IdentityProof /></ProtectedRoute>} />
               <Route path="/properties/property/:slug" element={<SingleProperty />} />
+              <Route path="/roomie-flats/:id" element={<RoomieFlatPage />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/team" element={<Team />} />
@@ -92,7 +97,6 @@ function App() {
             </Routes>
           </div>
           <div className="px-[2%] md:px-[6%] bg-card-dark border border-card-dark mt-12">
-            {/* <NewsLetter /> */}
             <div className="mt-10">
               <Footer />
             </div>

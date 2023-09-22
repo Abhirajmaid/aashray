@@ -6,14 +6,11 @@ import {
   CTA,
   HeadeFilters,
   Pagination,
-  PriceRange,
   SocialIcons,
   Type,
 } from "../components/common/page-componets";
 import Loader from "../components/common/Loader";
-
 import { PropertyList, PropertyFullWidth } from "../components/property";
-// import { property } from "../data/dummyData";
 import { closeFilterMenu, uiStore } from "../features/uiSlice";
 import { fetchDataFromApi } from "../utils/api";
 
@@ -38,12 +35,8 @@ const Property = () => {
     setShowLoader(true);
     const { data } = await fetchDataFromApi("/api/listings?populate=*");
     setListingsData(data);
-    // console.log(data);
     setShowLoader(false);
   };
-
-  // console.log(listingsData);
-  // console.log(property);
 
   const [layout, setLayout] = useState("grid");
 
@@ -78,8 +71,7 @@ const Property = () => {
                   <p className="uppercase">Filters</p>
                 </div>
                 <AdvancedSearch />
-                {/* <Type /> */}
-                {/* <PriceRange /> */}
+                <Type />
                 <SocialIcons />
                 <CTA />
               </div>

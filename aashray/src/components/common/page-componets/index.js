@@ -7,7 +7,6 @@ export { default as SocialIcons } from "./SocialIcons";
 export { default as Team } from "./Team";
 export { default as WhatWeDo } from "./WhatWeDo";
 export { default as AdvancedSearch } from "./property-filters/AdvancedSearch";
-export { default as PriceRange } from "./property-filters/PriceRange";
 export { default as Type } from "./property-filters/Type";
 export { default as ImageCarousel } from "./ImageCarousel"
 export { default as HeadeFilters } from "./property-filters/HeadeFilters";

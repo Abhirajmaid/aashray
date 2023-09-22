@@ -1,47 +1,75 @@
 import React, { useEffect, useState } from "react";
 import { UserAuth } from "../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import { addDoc, collection } from "firebase/firestore";
-import { storage, db } from "../../firebase";
 import { Toast } from "../../context/ToastContext";
+import { PostDataToApi } from "../../utils/api";
+import { Icon } from "@iconify/react";
 
+const initialUser = {
+  name: "",
+  email: "",
+  city: "",
+  mobile: "",
+  password: "",
+  profile: "",
+};
 const Signup = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [city, setCity] = useState("");
+  const [aashrayUser, setAashrayUser] = useState(initialUser);
+  const { name, email, city, mobile, password } = aashrayUser;
 
   const [status, setStatus] = useState(false);
+
+  const [passVisible, setPassVisible] = useState(false);
 
   const { createUser } = UserAuth();
   const { success, error, warn } = Toast();
 
   const navigate = useNavigate();
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setAashrayUser((currentUser) => ({
+      ...currentUser,
+      [name]: value,
+    }));
+  };
+
+  const storeUser = () => {
+    try {
+      PostDataToApi("/api/aashray-users", {
+        name: name,
+        email: email,
+        city: city,
+        mobile: mobile,
+        password: password,
+      });
+      success("Signed-Up Successfully!");
+      navigate("/user-profile");
+    } catch (e) {
+      warn(e);
+      error("Somthing went wrong!");
+    }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus(true);
-    if (password === "" || email === "" || name === "" || mobile === "") {
+    if (
+      password === "" ||
+      email === "" ||
+      name === "" ||
+      mobile === "" ||
+      city === ""
+    ) {
       error("Please fill all the fields!");
-    } else if (!(mobile.length === 10)) {
+    } else if (!(mobile.length === 10 || mobile.startsWith("0"))) {
       error("Wrong mobile no.");
     } else if (!(password.length >= 6)) {
       error("Password should be at leat 6 character!");
     } else {
       try {
         await createUser(email, password);
-        const docRef = await addDoc(collection(db, "users"), {
-          username: name,
-          email: email,
-          mobile: mobile,
-          city: city,
-        });
-
-        docRef?.id ? success("Signed Up Succeessfully") : warn("waiting");
-        navigate(`/user-profile`);
+        storeUser();
       } catch (e) {
-        console.log(e.message);
         if (e.message === "Firebase: Error (auth/invalid-email).") {
           error("Invalid Email.");
         } else if (
@@ -52,21 +80,6 @@ const Signup = () => {
       }
     }
   };
-
-  // const handleGoogleSignIn = async () => {
-  //   try {
-  //     await googleSignIn();
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (user != null) {
-  //     success("Login Succeessfully");
-  //     navigate("/user-profile");
-  //   }
-  // }, [user]);
 
   return (
     <div className="pt-16 md:px-[6%] px-[5%] ">
@@ -89,7 +102,7 @@ const Signup = () => {
                     status ? (name ? "" : "!border-red-600") : ""
                   } w-full p-2 rounded-md placeholder:font-light placeholder:text-gray-500 bg-slate-100 dark:bg-hover-color-dark card-bordered outline-none`}
                   name="name"
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={handleChange}
                 />
               </div>
               <div className="py-4  ">
@@ -100,18 +113,24 @@ const Signup = () => {
                     status ? (email ? " " : "!border-red-600") : ""
                   } w-full p-2 rounded-md placeholder:font-light placeholder:text-gray-500 bg-slate-100 dark:bg-hover-color-dark card-bordered outline-none`}
                   name="email"
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={handleChange}
                 />
               </div>
-              <div className="py-4">
+              <div className="py-4 relative">
                 <span className="mb-2 text-md">Password</span>
                 <input
-                  type="password"
-                  name="pass"
+                  type={passVisible ? "text" : "password"}
+                  name="password"
+                  autocomplete="new-password"
                   className={`${
                     status ? (password ? " " : "!border-red-600") : ""
                   } w-full p-2 rounded-md placeholder:font-light placeholder:text-gray-500 bg-slate-100 dark:bg-hover-color-dark card-bordered outline-none`}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={handleChange}
+                />
+                <Icon
+                  className=" absolute right-3 top-[55%] cursor-pointer"
+                  icon={passVisible ? "bi:eye-fill" : "bi:eye-slash-fill"}
+                  onClick={() => setPassVisible((passVisible) => !passVisible)}
                 />
               </div>
               <div className="py-4">
@@ -122,7 +141,7 @@ const Signup = () => {
                   className={`${
                     status ? (city ? " " : "!border-red-600") : ""
                   } w-full p-2 rounded-md placeholder:font-light placeholder:text-gray-500 bg-slate-100 dark:bg-hover-color-dark card-bordered outline-none`}
-                  onChange={(e) => setCity(e.target.value)}
+                  onChange={handleChange}
                 />
               </div>
               <div className="py-4">
@@ -133,7 +152,7 @@ const Signup = () => {
                   className={`${
                     status ? (mobile ? " " : "!border-red-600") : ""
                   } w-full p-2 rounded-md placeholder:font-light placeholder:text-gray-500 bg-slate-100 dark:bg-hover-color-dark card-bordered outline-none`}
-                  onChange={(e) => setMobile(e.target.value)}
+                  onChange={handleChange}
                 />
               </div>
               <div className="flex justify-between w-full py-4">
@@ -154,13 +173,6 @@ const Signup = () => {
                 Sign UP
               </button>
             </form>
-            {/* <button
-              onClick={handleGoogleSignIn}
-              className="w-full border border-gray-300 text-md p-2 rounded-lg mb-6 bg-slate-100 dark:bg-transparent hover:border-black dark:hover:bg-black hover:bg-black hover:text-white"
-            >
-              <img src="google.svg" alt="img" className="w-6 h-6 inline mr-2" />
-              Signup with Google
-            </button> */}
             <div className="text-center text-gray-400">
               Have an account?
               <Link to="/signin">

@@ -1,0 +1,94 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roomie_flats",
+  "info": {
+    "singularName": "roomie-flat",
+    "pluralName": "roomie-flats",
+    "displayName": "RoomieFlat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "mobile": {
+      "type": "biginteger"
+    },
+    "location": {
+      "type": "string"
+    },
+    "society": {
+      "type": "string"
+    },
+    "landmark": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Flats/Apartments",
+        "PG"
+      ]
+    },
+    "bedrooms": {
+      "type": "integer"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "balcony": {
+      "type": "integer"
+    },
+    "furnitureStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Furnished",
+        "Semi-furnished",
+        "Unfurnished"
+      ]
+    },
+    "totalRent": {
+      "type": "integer"
+    },
+    "deposite": {
+      "type": "integer"
+    },
+    "rentperson": {
+      "type": "integer"
+    },
+    "depositeperson": {
+      "type": "integer"
+    },
+    "currentFlatmates": {
+      "type": "integer"
+    },
+    "floorNo": {
+      "type": "integer"
+    },
+    "details": {
+      "type": "richtext"
+    },
+    "aashray_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::aashray-user.aashray-user",
+      "mappedBy": "roomie_flat"
+    },
+    "distance": {
+      "type": "integer"
+    }
+  }
+}

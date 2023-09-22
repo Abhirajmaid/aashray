@@ -61,15 +61,6 @@ const AdvancedSearch = () => {
           <option value="Semi-Furnished">Semi Furnished</option>
         </select>
       </div>
-      {/* <div className="mt-3">
-        <select name="" id="" className="filter">
-          <option value="">Availability</option>
-          <option value="immediately">Immediately</option>
-          <option value="15days">Within 15 days</option>
-          <option value="within30days">Within 30 days</option>
-          <option value="after30days">After 30 days</option>
-        </select>
-      </div> */}
       <div className="mt-3">
         <select
           name=""

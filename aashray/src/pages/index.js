@@ -12,3 +12,4 @@ export { default as UserProfile } from "./UserProfile"
 export { default as Signin } from "./_Authentication/Signin";
 export { default as Signup } from "./_Authentication/Signup";
 export { default as LoaderScreen } from "./LoaderScreen"
+export { default as IdentityProof } from "./_Authentication/IdentityProof"

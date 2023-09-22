@@ -1,2 +1,5 @@
 export { default as Hero } from "./Hero"
-export { default as RegForm } from "./RegForm"
+export { default as FlatRegForm } from "./FlatRegForm"
+export { default as RoomieReg } from "./RoomieReg"
+export { default as RoomieFlatList } from "./RoomieFlatList"
+export { default as RoomieSingleList } from "./RoomieSingleList"

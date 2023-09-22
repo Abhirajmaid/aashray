@@ -14,19 +14,19 @@ const OwnerDetails = ({ owner }) => {
             Contact Seller
           </h1>
           <div className="flex gap-5">
-            <div className="bg-slate-400 rounded-[50%] overflow-hidden">
+            <div className="bg-slate-400 rounded-full overflow-hidden w-[30%] ">
               <img
                 src="https://i.pinimg.com/564x/74/d7/b0/74d7b05c3476e062ca7c26452ffb22cb.jpg"
                 alt=""
                 className=" w-[100px]"
               />
             </div>
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center w-[70%]">
               <div className="flex align-middle text-dark-light gap-2 font-bold">
                 <span>Name: </span>
                 <h3>{owner[0]?.attributes?.Name}</h3>
               </div>
-              <div className="flex align-middle text-dark-light gap-2 font-bold">
+              <div className="flex align-middle text-dark-light gap-2 font-bold flex-wrap gap-y-0">
                 <span>Email: </span>
                 <h3>{owner[0]?.attributes?.Email}</h3>
               </div>

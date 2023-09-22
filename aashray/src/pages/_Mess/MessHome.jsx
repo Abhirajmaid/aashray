@@ -8,11 +8,10 @@ import SelectRating from "@/components/Home/SelectRating";
 import SkeltonLoading from "@/components/SkeltonLoading";
 import { UserLocationContext } from "@/context/UserLocationContext";
 import { signOut, useSession } from "next-auth/react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
-export default function Home() {
+export default function MessHome() {
   const { data: session } = useSession();
   const [category, setCategory] = useState();
   const [radius, setRadius] = useState(2500);
@@ -50,7 +49,7 @@ export default function Home() {
   };
 
   const onRatingChange = (rating) => {
-    if (rating.length == 0) {
+    if (rating.length === 0) {
       setBusinessList(businessListOrg);
     }
     const result = businessList.filter((item) => {

@@ -45,14 +45,14 @@ const SingleProperty = () => {
     <div className="pt-16 md:px-[6%] px-[5%] ">
       {propertyData ? (
         <div className="md:flex-row flex flex-col w-full gap-5 ">
-          <div className="md:w-[75%] w-full flex flex-col gap-6">
+          <div className="md:w-[72%] w-full flex flex-col gap-6">
             <SingleFull data={propertyData?.attributes} />
             {details ? (
               <Details details={propertyData?.attributes?.description} />
             ) : null}
             <Amenities amenities={propertyData?.attributes?.amenities?.data} />
           </div>
-          <div className="md:w-[25%] w-full mb-10">
+          <div className="md:w-[28%] w-full mb-10">
             <OwnerDetails owner={propertyData?.attributes?.owner_users?.data} />
           </div>
         </div>
