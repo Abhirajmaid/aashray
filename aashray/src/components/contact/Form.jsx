@@ -37,8 +37,8 @@ const Form = () => {
       user
         ? emailjs
             .sendForm(
-              "service_2b1z2va",
-              "template_rjhpzjb",
+              "service_gdm10ak",
+              "template_2v70m7c",
               form.current,
               "jgD1dSgL1VKS1UTD5"
             )

@@ -47,7 +47,35 @@ const Property = () => {
         setLayout={setLayout}
         total={listingsData?.length}
       />
-      {showLoader ? (
+      <div className="grid md:grid-cols-4 gap-x-14 mt-5">
+        <div className="md:col-span-3 mt-5 md:mt-0 h-fit md:sticky top-0 ">
+          {layout === "grid" ? <PropertyList /> : <PropertyFullWidth />}
+          <Pagination itemsPerPage={8} pageData={listingsData} />
+        </div>
+        <div className=" md:col-span-1 row-start-3 md:row-start-auto h-fit md:sticky top-0">
+          <div
+            className={`filter-modal ${isFilterMenuOpen && "open"}`}
+            onClick={handleCloseFiltermenu}
+          >
+            <div className={`filter-dialog ${isFilterMenuOpen && "open"}`}>
+              <div className="flex-center-between border-b dark:border-dark md:hidden">
+                <div
+                  className="icon-box md:hidden"
+                  onClick={() => dispatch(closeFilterMenu())}
+                >
+                  <FiDelete />
+                </div>
+                <p className="uppercase">Filters</p>
+              </div>
+              <AdvancedSearch />
+              <Type />
+              <SocialIcons />
+              <CTA />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* {showLoader ? (
         <Loader />
       ) : (
         <div className="grid md:grid-cols-4 gap-x-14 mt-5">
@@ -78,7 +106,7 @@ const Property = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
