@@ -7,7 +7,6 @@ import Navbar from "./components/common/Navbar";
 import {
   About,
   Property,
-  Blog,
   Contact,
   Team,
   Faqs,
@@ -18,9 +17,11 @@ import {
   Signup,
   UserProfile,
   Premium,
+Chat,
   LoaderScreen,
   IdentityProof,
 } from "./pages";
+
 import { closeDropdown } from "./features/uiSlice";
 import Dropdown from "./components/common/DropDown";
 import { AuthContextProvider } from "./context/AuthContext";
@@ -88,7 +89,7 @@ function App() {
               <Route path="/identity" element={<ProtectedRoute><IdentityProof /></ProtectedRoute>} />
               <Route path="/properties/property/:slug" element={<SingleProperty />} />
               <Route path="/roomie-flats/:id" element={<RoomieFlatPage />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/chat" element={<Chat />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/team" element={<Team />} />
               <Route path="/faqs" element={<Faqs />} />

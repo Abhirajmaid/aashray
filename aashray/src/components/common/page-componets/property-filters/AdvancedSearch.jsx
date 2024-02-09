@@ -16,7 +16,7 @@ const AdvancedSearch = () => {
 
   return (
     <div className="p-3 border dark:border-dark">
-      <h1 className="font-semibold">Advanced Search</h1>
+      {/* <h1 className="font-semibold">Advanced Search</h1>
       <div className="mt-3">
         <select
           name=""
@@ -109,7 +109,7 @@ const AdvancedSearch = () => {
         onClick={search}
       >
         search property
-      </button>
+      </button> */}
     </div>
   );
 };
