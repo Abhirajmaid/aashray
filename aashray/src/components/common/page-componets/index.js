@@ -11,3 +11,5 @@ export { default as Type } from "./property-filters/Type";
 export { default as ImageCarousel } from "./ImageCarousel"
 export { default as HeadeFilters } from "./property-filters/HeadeFilters";
 export { default as VideoModel } from "../VideoModel"
+export {default as SingleProductCard} from "./SingleProductCard"
+export {default as SingleProductCardFullWidth} from './SingleProductCardFullWidth'

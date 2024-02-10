@@ -43,7 +43,7 @@ export const navLinks = [
   },
   {
     id: 5,
-    linkText: "Blog",
-    url: "/blog",
+    linkText: "Chat",
+    url: "/chat",
   },
 ];

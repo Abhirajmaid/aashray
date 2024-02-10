@@ -70,7 +70,7 @@ const Footer = () => {
                 <a href="#services">Services</a>
               </li>
               <li className="my-3 text-muted">
-                <a href="/blog">Blog</a>
+                <a href="/chat">Chat</a>
               </li>
             </ul>
           </div>

@@ -19,13 +19,12 @@ const Services = () => {
     <div className="pt-10 pb-16">
       <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-4">
         <div className="md:col-span-1">
-          <h1 className="sub-heading">Portfolio</h1>
+          <h1 className="sub-heading">Services</h1>
           <h1 className="heading">
             find what you need, everything at one place!!
           </h1>
           <p className="mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-            veniam, odio suscipit minima accusamus ipsum.
+          "Discover Your Dream Home with Ease: A Centralized Hub for All Your Housing Needs! From apartments to houses, find the perfect space for your lifestyle, all in one convenient place. Your journey to a new home starts here!"
           </p>
           <Link to={"/premium"}>
             <button className="mt-4 btn btn-primary">Buy Premium</button>

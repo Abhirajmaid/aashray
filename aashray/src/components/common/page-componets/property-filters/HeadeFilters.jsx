@@ -8,7 +8,7 @@ const HeadeFilters = ({ layout, setLayout, total }) => {
   const dispatch = useDispatch();
   return (
     <div className="flex-col gap-4 flex-center-between md:flex-row">
-      <div className="w-full flex-center-between">
+      {/* <div className="w-full flex-center-between">
         <div className="gap-2 flex-align-center">
           <div
             className={`w-10 h-10 rounded-xl grid place-items-center bg-slate-100 hover:bg-slate-200 sm:cursor-pointer transition-a dark:bg-card-dark  ${
@@ -51,7 +51,7 @@ const HeadeFilters = ({ layout, setLayout, total }) => {
           className="border outline-none bg-transparent dark:border-dark px-3 py-[0.35rem] w-full"
           placeholder="Enter Keywords.."
         />
-      </div>
+      </div> */}
     </div>
   );
 };
